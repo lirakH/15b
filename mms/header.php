@@ -178,8 +178,6 @@
           <li><a href="#" class="nav-link px-2 link-light">About</a></li>
           <li><a href="dashboard.php" class="nav-link px-2 link-light">Dashboard</a></li>
         <?php 
-        require 'config.php';
-
 
 
           if(!empty($_SESSION['admin']) && $_SESSION['admin'] == true){
