@@ -13,7 +13,7 @@ We will get the changed data from editUsers.php file and update them into databa
 
 		$sql = "UPDATE users SET id=:id, emri=:emri, username=:username, email=:email WHERE id=:id";
 
-		$prep = $conn->prepare($sql);
+		$prep = $con->prepare($sql);
 		$prep->bindParam(':id',$id);
 		$prep->bindParam(':emri',$emri);
 		$prep->bindParam(':username',$username);

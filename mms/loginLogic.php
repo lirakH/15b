@@ -61,7 +61,7 @@
 					$_SESSION['username'] = $data['username'];
 					$_SESSION['email'] = $data['email'];
 					$_SESSION['emri'] = $data['emri'];
-					$_SESSION['admin'] = $data['is_admin'];
+					$_SESSION['is_admin'] = $data['is_admin'];
 
 					//And head to dashboard.php
 					header('Location: index.php');

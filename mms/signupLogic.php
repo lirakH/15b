@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 			header("refresh:2; url=signupForm.php");
 		}else{
 
-			$sql = "INSERT INTO users(emri,username,email,password) VALUES (:emri, :username, :email, :password)";
+			$sql = "INSERT INTO users(emri,username,email,password,confirm_password, is_admin) VALUES (:emri, :username, :email, :password, :confirm_password, '')";
 
 			$sqlQuery = $con->prepare($sql);
 
@@ -39,6 +39,7 @@ if (isset($_POST['submit'])) {
 			$sqlQuery->bindParam(":username", $username);
 			$sqlQuery->bindParam(":email", $email);
 			$sqlQuery->bindParam(":password", $passwordHash);
+			$sqlQuery->bindParam(":confirm_password", $passwordHash);
 
 			$sqlQuery->execute();
 

@@ -180,9 +180,9 @@
         <?php 
 
 
-          if(!empty($_SESSION['admin']) && $_SESSION['admin'] == true){
+          if(!empty($_SESSION['is_admin']) && $_SESSION['is_admin'] == true){
         ?>
-          <li><a href="dashboard.php" class="nav-link px-2 link-light">Dashboard</a></li>
+          <li><a href="list_movies.php" class="nav-link px-2 link-light">Movies</a></li>
         <?php
           }
         ?>
