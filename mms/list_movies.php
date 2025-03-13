@@ -60,7 +60,7 @@
       <ul class="nav flex-column">
            <?php if ($_SESSION['is_admin'] == 'true') { ?>
             <li class="nav-item">
-              <a class="nav-link" href="home.php">
+              <a class="nav-link" href="index.php">
                 <span data-feather="file"></span>
                 Home
               </a>
