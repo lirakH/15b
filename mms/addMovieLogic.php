@@ -16,7 +16,7 @@
 
 		$sql = "INSERT INTO movies(movie_name, movie_desc, movie_quality, movie_rating, movie_image) VALUES (:movie_name, :movie_desc, :movie_quality, :movie_rating, :movie_image)";
 
-		$insertMovie = $conn->prepare($sql);
+		$insertMovie = $con->prepare($sql);
 		
 
 		$insertMovie->bindParam(':movie_name', $movie_name);
@@ -27,7 +27,7 @@
 
 		$insertMovie->execute();
 
-		header("Location: addMovie.php");
+		header("Location: addMovies.php");
 
 
 	}
