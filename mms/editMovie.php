@@ -6,6 +6,14 @@
 
    include_once('config.php');
 
+   if (empty($_SESSION['username'])) {
+          header("Location: login.php");
+    }
+
+  if ($_SESSION['is_admin'] != true ) {
+          header("Location: dashboard.php");
+    }
+
    $id = $_GET['id'];
 
    $sql = "SELECT * FROM movies WHERE id=:id";
@@ -88,7 +96,7 @@
       <h2>Edit movie's details</h2>
       <div class="table-responsive">
         
-        <form action="update.php" method="post">
+        <form action="editMovieLogic.php" method="post">
         <div class="form-floating">
           <input readonly="readonly" type="text" class="form-control" id="floatingInput" placeholder="id" name="id" value="<?php echo  $movie_data['id'] ?>">
           <label for="floatingInput">ID</label>

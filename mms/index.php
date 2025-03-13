@@ -41,8 +41,8 @@
 	              <p class="card-text"><?php echo $movie['movie_desc']; ?></p>
 	              <div class="d-flex justify-content-between align-items-center">
 	                <div class="btn-group">
-	                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-	                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+	                  <a href="detailMovie.php?id=<?php echo $movie['id']; ?>"  class="btn btn-sm btn-outline-secondary" >View</a>
+                  	<a href="editMovie.php?id=<?php echo $movie['id']; ?>"  class="btn btn-sm btn-outline-secondary">Edit</a>
 	                </div>
 	                <small class="text-body-secondary">Rating: <?php echo $movie['movie_rating']; ?></small>
 	                <small class="text-body-secondary"><?php echo $movie['movie_quality']; ?></small>
