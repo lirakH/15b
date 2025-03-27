@@ -5,14 +5,19 @@
   Creating a form which will post some of those datas into book.php file
   */
   
+
    include_once('config.php');
 
+if (empty($_SESSION['id'])) {
+          header("Location: login.php");
+    }
+    
    $id = $_GET['id'];
 
    $_SESSION['movie_id'] = $id;
    
    $sql = "SELECT * FROM movies WHERE id=:id";
-   $selectMovie = $conn->prepare($sql);
+   $selectMovie = $con->prepare($sql);
    $selectMovie->bindParam(":id",$id);
    $selectMovie->execute();
    $movie_data = $selectMovie->fetch();
